@@ -1,0 +1,16 @@
+function fixedpoint(a, g, error)
+  x = g(a)
+  while abs(x-a) > error
+    a = x
+    x = g(a)
+  end
+  return x
+end
+
+f(x) = e^(-(x^2))-(2*x)
+r = secant(0.4, 0.5, f, error)
+println(r)
+
+f(x) = e^(-(x^2))-(2*x)
+r = secant(0.4, 0.5, f, error)
+println(r)

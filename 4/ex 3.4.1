@@ -1,0 +1,23 @@
+function fixedpoint(a, g, error)
+  x = g(a)
+  while abs(x-a) > error
+    a = x
+    x = g(a)
+  end
+  return x
+end
+
+g(x) = log(x+2)
+error = 10^-8
+r = fixedpoint(1.1, g, error)
+println(r)
+
+error = 10^-5
+g(x) = x + ((cos(x)-(x^2))/(sin(x)+(2*x)))
+r = fixedpoint(1, g, error)
+println(r)
+
+error = 10^-5
+g(x) = x + ((cos(x)-(x^2))/(sin(x)+(2*x)))
+r = fixedpoint(1, g, error)
+println(r)
