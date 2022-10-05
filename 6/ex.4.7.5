@@ -1,0 +1,15 @@
+# Exercicio 4.7.5
+A = [4 0 1;
+     1 10 3;
+     2 1 4]
+
+B = [6 ; 27 ; 12]
+
+x = A \ B
+println(x)
+
+x = jacobi(A,B,100,error)
+println(x)
+
+x = seidel(A,B,100,error)
+println(x)
