@@ -2,7 +2,7 @@ using Pkg
 
 dependencies = Pkg.project().dependencies
 
-if !haskey(dependencies, "Calculus")
+if!haskey(dependencies, "Calculus")
   Pkg.add("Calculus")
 end
 
